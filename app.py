@@ -4,6 +4,9 @@
 # Import Flask framework
 from flask import Flask
 
+# Import os to access environment variables
+import os
+
 # Import psycopg2 to connect to PostgreSQL database
 import psycopg2
 
@@ -11,7 +14,7 @@ import psycopg2
 app = Flask(__name__)
 
 # Database URL (Internal URL from Render)
-DATABASE_URL = "postgresql://ersa7726_lab10_postgres_user:SUdlgDt8NRk0ljAb0icUIXajyujM4NwN@dpg-d7aq71h5pdvs73dou46g-a/ersa7726_lab10_postgres"
+DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://your_local_fallback_if_needed")
 
 
 # Home Route
