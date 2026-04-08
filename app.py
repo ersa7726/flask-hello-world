@@ -5,7 +5,7 @@
 from flask import Flask
 
 # Import psycopg2 to connect to PostgreSQL database
-import psycopg2
+import psycopg
 
 # Create Flask app
 app = Flask(__name__)
@@ -24,7 +24,7 @@ def hello_world():
 @app.route("/db_test")
 def db_test():
 
-    conn = psycopg2.connect(DATABASE_URL)
+    conn = psycopg.connect(DATABASE_URL)
 
     conn.close()
 
