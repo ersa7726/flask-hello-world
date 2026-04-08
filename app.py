@@ -20,7 +20,7 @@ DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://your_local_fallback_
 # Home Route
 @app.route("/")
 def hello_world():
-    return "Hello World from Erick Samayoa in 3308"
+    return "<h1>Hello World from Erick Samayoa in 3308</h1>"
 
 
 # db_test route to test the connection to PostgreSQL database
